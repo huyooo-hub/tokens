@@ -1,4 +1,4 @@
-# 🎨 @nuxt-themes/tokens
+# 🎨 @huyooo-hub/tokens
 
 A design system built for **Nuxt**.
 
@@ -12,13 +12,13 @@ A design system built for **Nuxt**.
 ## Install
 
 ```bash
-npm install @nuxt-themes/tokens
+npm install @huyooo-hub/tokens
 ```
 
 ```ts
 defineNuxtConfig({
-  extends: ['@nuxt-themes/tokens']
-})
+  extends: ['@huyooo-hub/tokens'],
+});
 ```
 
 ## License

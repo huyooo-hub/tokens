@@ -22,7 +22,7 @@ defineProps({
   <header>
     <h1>
       <IconNuxt class="icon" />
-      <span>@nuxt-themes/tokens</span>
+      <span>@huyooo-hub/tokens</span>
     </h1>
     <div>
       <TokenBadge :type="type" :clipboard-state="clipboardState" :token="hoveredToken" />

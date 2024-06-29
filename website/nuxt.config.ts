@@ -1,13 +1,13 @@
-import { createResolver } from '@nuxt/kit'
+import { createResolver } from '@nuxt/kit';
 
-const { resolve } = createResolver(import.meta.url)
+const { resolve } = createResolver(import.meta.url);
 
 export default defineNuxtConfig({
   extends: ['@nuxt-themes/typography'],
 
   app: {
     head: {
-      title: '@nuxt-themes/tokens',
+      title: '@huyooo-hub/tokens',
       meta: [
         {
           key: 'meta',
@@ -18,7 +18,12 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['../src/module', 'nuxt-icon', '@nuxt/content', '@vueuse/motion/nuxt'],
+  modules: [
+    '../src/module',
+    'nuxt-icon',
+    '@nuxt/content',
+    '@vueuse/motion/nuxt',
+  ],
 
   components: [
     {
@@ -33,7 +38,20 @@ export default defineNuxtConfig({
         dark: 'github-dark',
         default: 'github-light',
       },
-      preload: ['json', 'js', 'ts', 'html', 'css', 'vue', 'diff', 'shell', 'markdown', 'yaml', 'bash', 'ini'],
+      preload: [
+        'json',
+        'js',
+        'ts',
+        'html',
+        'css',
+        'vue',
+        'diff',
+        'shell',
+        'markdown',
+        'yaml',
+        'bash',
+        'ini',
+      ],
     },
   },
 
@@ -44,4 +62,4 @@ export default defineNuxtConfig({
   build: {
     transpile: ['nuxt/app'],
   },
-})
+});
