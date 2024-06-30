@@ -1,6 +1,6 @@
 {
     "name": "@huyooo-hub/tokens",
-    "version": "2.1.1",
+    "version": "2.1.2",
     "description": "Nuxt official Design Tokens definition.",
     "author": "NuxtLabs <hello@nuxtlabs.com>",
     "license": "MIT",
