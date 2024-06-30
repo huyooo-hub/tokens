@@ -208,7 +208,7 @@ css({
     fontFamily: '{huyooo.font.sans}',
     fontWeight: 'bold',
     marginTop: '{huyooo.space.2}',
-    fontSize: '{fontSize.3xl}'
+    fontSize: '{huyooo.fontSize.3xl}'
   },
   '.box': {
     position: 'relative',
@@ -303,7 +303,7 @@ css({
     }
   },
   '.paragraph': {
-    fontSize: '{fontSize.xl}'
+    fontSize: '{huyooo.fontSize.xl}'
   },
   'span': {
     '& > span': {

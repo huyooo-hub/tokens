@@ -62,10 +62,10 @@ css({
       display: 'flex',
       alignItems: 'center',
       gap: '{huyooo.space.2}',
-      fontSize: '{fontSize.sm}',
+      fontSize: '{huyooo.fontSize.sm}',
       fontWeight: '{huyooo.fontWeight.black}',
       '@xl': {
-        fontSize: '{fontSize.xl}',
+        fontSize: '{huyooo.fontSize.xl}',
       },
       '.icon': {
         width: '{huyooo.size.32}'

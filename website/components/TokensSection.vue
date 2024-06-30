@@ -116,7 +116,7 @@ css({
           margin: 0
         },
         '& > div': {
-          fontSize: '{fontSize.2xl}'
+          fontSize: '{huyooo.fontSize.2xl}'
         }
       }
     },
