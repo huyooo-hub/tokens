@@ -12,55 +12,64 @@ const props = defineProps({
     type: String,
     required: false,
   },
-})
+});
 
 const displayValue = computed(() => {
   if (!props.token) {
-    return ''
+    return '';
   }
 
   if (props.type === 'token' && props.token?.path) {
-    return `{${props.token.path.join('.')}}`
+    return `{${props.token.path.join('.')}}`;
   }
 
-  const variable = props.token?.variable
+  const variable = props.token?.variable;
 
   if (variable) {
-    return `{${variable.replace('var(--', '').replace(')', '').split('-').join('.')}}`
+    return `{${variable
+      .replace('var(--', '')
+      .replace(')', '')
+      .split('-')
+      .join('.')}}`;
   }
 
-  return props.token?.attributes?.variable || props.token?.value || props.token?.original?.value || ''
-})
+  return (
+    props.token?.attributes?.variable ||
+    props.token?.value ||
+    props.token?.original?.value ||
+    ''
+  );
+});
 
-const badge = ref()
+const badge = ref();
 
-const { apply, leave } = useMotion(
-  badge,
-  {
-    initial: {
-      y: 100,
-      opacity: 0,
-      transition: {
-        type: 'spring',
-        stiffness: 600,
-        damping: 35,
-      },
-    },
-    enter: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: 'spring',
-        stiffness: 600,
-        damping: 35,
-      },
+const { apply, leave } = useMotion(badge, {
+  initial: {
+    y: 100,
+    opacity: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 600,
+      damping: 35,
     },
   },
-)
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 600,
+      damping: 35,
+    },
+  },
+});
 </script>
 
 <template>
-  <Transition @enter="apply('enter')" @leave="(_: any, done: any) => leave(done)">
+  <Transition
+    @enter="apply('enter')"
+    @leave="(_: any, done: any) => leave(done)"
+  >
     <button v-if="token" ref="badge">
       {{ displayValue }}
       <ClipboardState :clipboard-state="clipboardState" />
@@ -75,14 +84,14 @@ css({
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'hidden',
-    border: '1px solid {color.green.500}',
-    backgroundColor: 'rgba({color.green.200}, 0.4)',
+    border: '1px solid {huyooo.color.green.500}',
+    backgroundColor: 'rgba({huyooo.color.green.200}, 0.4)',
     padding: '{space.1} {space.2}',
     borderRadius: '{radii.lg}',
     fontWeight: '{fontWeight.bold}',
-    color: '{color.black}',
+    color: '{huyooo.color.black}',
     '@dark': {
-      color: '{color.white}'
+      color: '{huyooo.color.white}'
     }
   }
 })

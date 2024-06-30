@@ -1,28 +1,41 @@
 <script setup>
-import { theme } from '#pinceau/theme'
+import { theme } from '#pinceau/theme';
 
-const categories = computed(
-  () => {
-    return Object.entries(theme).filter(([key]) => !(['prose', 'typography', 'text'].includes(key)))
-  },
-)
+const categories = computed(() => {
+  return Object.entries(theme).filter(
+    ([key]) => !['prose', 'typography', 'text'].includes(key)
+  );
+});
 
-const cpType = ref('token')
+const cpType = ref('token');
 
-const cpState = ref('')
+const cpState = ref('');
 
-const hoveredToken = ref()
+const hoveredToken = ref();
 </script>
 
 <template>
   <div class="nuxt-themes-tokens">
-    <Navbar :type="cpType" :clipboard-state="cpState" :hovered-token="hoveredToken" />
+    <Navbar
+      :type="cpType"
+      :clipboard-state="cpState"
+      :hovered-token="hoveredToken"
+    />
 
     <section class="motd">
       <ContentDoc />
     </section>
 
-    <TokensSection v-for="[key, tokens] in categories" :key="key" v-model:hoveredToken="hoveredToken" v-model:clipboardState="cpState" :type="cpType" :name="key" :tokens="tokens" root />
+    <TokensSection
+      v-for="[key, tokens] in categories"
+      :key="key"
+      v-model:hoveredToken="hoveredToken"
+      v-model:clipboardState="cpState"
+      :type="cpType"
+      :name="key"
+      :tokens="tokens"
+      root
+    />
   </div>
 </template>
 
@@ -32,11 +45,11 @@ css({
     width: '100%',
     height: '100%',
     overflowX: 'hidden',
-    backgroundColor: '{color.white}',
-    color: '{color.black}',
+    backgroundColor: '{huyooo.color.white}',
+    color: '{huyooo.color.black}',
     '@dark': {
-      backgroundColor: '{color.black}',
-      color: '{color.white}'
+      backgroundColor: '{huyooo.color.black}',
+      color: '{huyooo.color.white}'
     }
   },
   body: {

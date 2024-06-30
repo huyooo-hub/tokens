@@ -1,9 +1,223 @@
-import { defineTheme } from 'pinceau'
-import type { PinceauTheme, PropertyValue } from 'pinceau'
+import { defineTheme } from 'pinceau';
+import type { PinceauTheme, PropertyValue } from 'pinceau';
 
 export default defineTheme({
+  huyooo: {
+    $schema: {
+      title: 'Your website color palette.',
+      tags: [
+        '@studioInput design-token',
+        '@studioInputTokenType color',
+        '@studioIcon ph:palette',
+      ],
+    },
+    color: {
+      $schema: {
+        title: 'Your website color palette.',
+        tags: [
+          '@studioInput design-token',
+          '@studioInputTokenType color',
+          '@studioIcon ph:palette',
+        ],
+      },
+      white: '#ffffff',
+      black: '#0E0D0D',
+      gray: {
+        50: '#FBFBFB',
+        100: '#F3F3F2',
+        200: '#ECEBE8',
+        300: '#DBD9D3',
+        400: '#ADA9A4',
+        500: '#97948F',
+        600: '#3D3B38',
+        700: '#292724',
+        800: '#1C1B19',
+        900: '#121110',
+      },
+      green: {
+        50: '#ECFFF7',
+        100: '#DBFFF0',
+        200: '#C0FFE4',
+        300: '#86FBCB',
+        400: '#3CEEA5',
+        500: '#0DD885',
+        600: '#039B5A',
+        700: '#01492C',
+        800: '#002817',
+        900: '#00190F',
+      },
+      yellow: {
+        50: '#FFFCEE',
+        100: '#FFF7D9',
+        200: '#FFF3C0',
+        300: '#FFE372',
+        400: '#FFDC4E',
+        500: '#FBCA05',
+        600: '#AB8A07',
+        700: '#463801',
+        800: '#292100',
+        900: '#1B1500',
+      },
+      orange: {
+        50: '#FFF7F2',
+        100: '#FFEFE5',
+        200: '#FFE5D7',
+        300: '#FDAC7E',
+        400: '#FC8E51',
+        500: '#FA630E',
+        600: '#7E3004',
+        700: '#3F1802',
+        800: '#2D1102',
+        900: '#1A0A01',
+      },
+      pumpkin: {
+        50: '#ffe9d9',
+        100: '#ffd3b3',
+        200: '#ffbd8d',
+        300: '#ffa666',
+        400: '#ff9040',
+        500: '#ff7a1a',
+        600: '#e15e00',
+        700: '#a94700',
+        800: '#702f00',
+        900: '#381800',
+      },
+      red: {
+        50: '#FFF9F8',
+        100: '#FFF0EC',
+        200: '#FFE6E1',
+        300: '#FFA692',
+        400: '#FF7353',
+        500: '#FF3B10',
+        600: '#AD2203',
+        700: '#550F00',
+        800: '#340A01',
+        900: '#1C0301',
+      },
+      pear: {
+        50: '#f7f8dc',
+        100: '#eff0ba',
+        200: '#e8e997',
+        300: '#e0e274',
+        400: '#d8da52',
+        500: '#d0d32f',
+        600: '#a8aa24',
+        700: '#7e801b',
+        800: '#545512',
+        900: '#2a2b09',
+      },
+      teal: {
+        50: '#d7faf8',
+        100: '#aff4f0',
+        200: '#87efe9',
+        300: '#5fe9e1',
+        400: '#36e4da',
+        500: '#1cd1c6',
+        600: '#16a79e',
+        700: '#117d77',
+        800: '#0b544f',
+        900: '#062a28',
+      },
+      lightblue: {
+        50: '#F1FCFF',
+        100: '#DCF7FF',
+        200: '#C5F2FF',
+        300: '#82E3FF',
+        400: '#55E1FF',
+        500: '#1AD6FF',
+        600: '#0893B1',
+        700: '#013858',
+        800: '#00232B',
+        900: '#001A1F',
+      },
+      blue: {
+        50: '#F2FAFF',
+        100: '#E2F4FF',
+        200: '#D0EEFF',
+        300: '#A1DDFF',
+        400: '#64C7FF',
+        500: '#1AADFF',
+        600: '#01659E',
+        700: '#013858',
+        800: '#002235',
+        900: '#00131D',
+      },
+      indigoblue: {
+        50: '#d9e5ff',
+        100: '#b3cbff',
+        200: '#8db0ff',
+        300: '#6696ff',
+        400: '#407cff',
+        500: '#1a62ff',
+        600: '#0047e1',
+        700: '#0035a9',
+        800: '#002370',
+        900: '#001238',
+      },
+      royalblue: {
+        50: '#dfdbfb',
+        100: '#c0b7f7',
+        200: '#a093f3',
+        300: '#806ff0',
+        400: '#614bec',
+        500: '#4127e8',
+        600: '#2c15c4',
+        700: '#211093',
+        800: '#160a62',
+        900: '#0b0531',
+      },
+      violet: {
+        50: '#ead9ff',
+        100: '#d5b3ff',
+        200: '#c08dff',
+        300: '#ab66ff',
+        400: '#9640ff',
+        500: '#811aff',
+        600: '#6500e1',
+        700: '#4c00a9',
+        800: '#330070',
+        900: '#190038',
+      },
+      purple: {
+        50: '#F8F5FF',
+        100: '#F1ECFF',
+        200: '#E5DCFF',
+        300: '#A589F9',
+        400: '#8961FD',
+        500: '#6B39FA',
+        600: '#370DAD',
+        700: '#200273',
+        800: '#14014A',
+        900: '#080020',
+      },
+      pink: {
+        50: '#ffd9f2',
+        100: '#ffb3e5',
+        200: '#ff8dd8',
+        300: '#ff66cc',
+        400: '#ff40bf',
+        500: '#ff1ab2',
+        600: '#e10095',
+        700: '#a90070',
+        800: '#70004b',
+        900: '#380025',
+      },
+      ruby: {
+        50: '#ffd9e4',
+        100: '#ffb3c9',
+        200: '#ff8dae',
+        300: '#ff6694',
+        400: '#ff4079',
+        500: '#ff1a5e',
+        600: '#e10043',
+        700: '#a90032',
+        800: '#700021',
+        900: '#380011',
+      },
+    },
+  },
   media: {
-    '$schema': {
+    $schema: {
       title: 'Your website media queries.',
       tags: [
         '@studioInput design-token',
@@ -11,15 +225,15 @@ export default defineTheme({
         '@studioIcon material-symbols:screenshot-monitor-outline-rounded',
       ],
     },
-    'xs': '(min-width: 475px)',
-    'sm': '(min-width: 640px)',
-    'md': '(min-width: 768px)',
-    'lg': '(min-width: 1024px)',
-    'xl': '(min-width: 1280px)',
+    xs: '(min-width: 475px)',
+    sm: '(min-width: 640px)',
+    md: '(min-width: 768px)',
+    lg: '(min-width: 1024px)',
+    xl: '(min-width: 1280px)',
     '2xl': '(min-width: 1536px)',
-    'rm': '(prefers-reduced-motion: reduce)',
-    'landscape': 'only screen and (orientation: landscape)',
-    'portrait': 'only screen and (orientation: portrait)',
+    rm: '(prefers-reduced-motion: reduce)',
+    landscape: 'only screen and (orientation: landscape)',
+    portrait: 'only screen and (orientation: portrait)',
   },
 
   color: {
@@ -251,7 +465,7 @@ export default defineTheme({
   },
 
   shadow: {
-    '$schema': {
+    $schema: {
       title: 'Your website shadows.',
       tags: [
         '@studioInput design-token',
@@ -259,17 +473,17 @@ export default defineTheme({
         '@studioIcon mdi:box-shadow',
       ],
     },
-    'xs': '0px 1px 2px 0px #000000',
-    'sm': '0px 1px 3px 0px #000000, 0px 1px 2px -1px #000000',
-    'md': '0px 4px 6px -1px #000000, 0px 2px 4px -2px #000000',
-    'lg': '0px 10px 15px -3px #000000, 0px 4px 6px -4px #000000',
-    'xl': '0px 20px 25px -5px {color.gray.400}, 0px 8px 10px -6px #000000',
+    xs: '0px 1px 2px 0px #000000',
+    sm: '0px 1px 3px 0px #000000, 0px 1px 2px -1px #000000',
+    md: '0px 4px 6px -1px #000000, 0px 2px 4px -2px #000000',
+    lg: '0px 10px 15px -3px #000000, 0px 4px 6px -4px #000000',
+    xl: '0px 20px 25px -5px {color.gray.400}, 0px 8px 10px -6px #000000',
     '2xl': '0px 25px 50px -12px {color.gray.900}',
-    'none': '0px 0px 0px 0px transparent',
+    none: '0px 0px 0px 0px transparent',
   },
 
   radii: {
-    '$schema': {
+    $schema: {
       title: 'Your website border radiuses.',
       tags: [
         '@studioInput design-token',
@@ -277,25 +491,25 @@ export default defineTheme({
         '@studioIcon material-symbols:rounded-corner',
       ],
     },
-    'none': '0px',
+    none: '0px',
     '4xs': '2px',
     '3xs': '4px',
     '2xs': '6px',
-    'xs': '8px',
-    'sm': '10px',
-    'md': '12px',
-    'lg': '14px',
-    'xl': '16px',
+    xs: '8px',
+    sm: '10px',
+    md: '12px',
+    lg: '14px',
+    xl: '16px',
     '2xl': '18px',
     '3xl': '20px',
     '4xl': '24px',
     '5xl': '28px',
     '6xl': '32px',
-    'full': '9999px',
+    full: '9999px',
   },
 
   size: {
-    '$schema': {
+    $schema: {
       title: 'Your website sizings.',
       tags: [
         '@studioInput design-token',
@@ -320,18 +534,18 @@ export default defineTheme({
     '80': '80px',
     '104': '104px',
     '200': '200px',
-    'xs': '20rem',
-    'sm': '24rem',
-    'md': '28rem',
-    'lg': '32rem',
-    'xl': '36rem',
+    xs: '20rem',
+    sm: '24rem',
+    md: '28rem',
+    lg: '32rem',
+    xl: '36rem',
     '2xl': '42rem',
     '3xl': '48rem',
     '4xl': '56rem',
     '5xl': '64rem',
     '6xl': '72rem',
     '7xl': '80rem',
-    'full': '100%',
+    full: '100%',
   },
 
   space: {
@@ -448,7 +662,7 @@ export default defineTheme({
     black: '900',
   },
   fontSize: {
-    '$schema': {
+    $schema: {
       title: 'Your website font sizes.',
       tags: [
         '@studioInput design-token',
@@ -456,11 +670,11 @@ export default defineTheme({
         '@studioIcon radix-icons:font-style',
       ],
     },
-    'xs': '0.75rem',
-    'sm': '0.875rem',
-    'base': '1rem',
-    'lg': '1.125rem',
-    'xl': '1.25rem',
+    xs: '0.75rem',
+    sm: '0.875rem',
+    base: '1rem',
+    lg: '1.125rem',
+    xl: '1.25rem',
     '2xl': '1.5rem',
     '3xl': '1.875rem',
     '4xl': '2.25rem',
@@ -513,7 +727,7 @@ export default defineTheme({
     loose: '2',
   },
   text: {
-    '$schema': {
+    $schema: {
       title: 'Your website text scales.',
       tags: [
         '@studioInput design-token',
@@ -521,23 +735,23 @@ export default defineTheme({
         '@studioIcon material-symbols:format-size-rounded',
       ],
     },
-    'xs': {
+    xs: {
       fontSize: '{fontSize.xs}',
       lineHeight: '{lead.4}',
     },
-    'sm': {
+    sm: {
       fontSize: '{fontSize.sm}',
       lineHeight: '{lead.5}',
     },
-    'base': {
+    base: {
       fontSize: '{fontSize.base}',
       lineHeight: '{lead.6}',
     },
-    'lg': {
+    lg: {
       fontSize: '{fontSize.lg}',
       lineHeight: '{lead.7}',
     },
-    'xl': {
+    xl: {
       fontSize: '{fontSize.xl}',
       lineHeight: '{lead.7}',
     },
@@ -618,46 +832,47 @@ export default defineTheme({
       return {
         marginTop: value,
         marginBottom: value,
-      }
+      };
     },
     mx: (value: PropertyValue<'margin'>) => {
       return {
         marginLeft: value,
         marginRight: value,
-      }
+      };
     },
     py: (value: PropertyValue<'margin'>) => {
       return {
         paddingTop: value,
         paddingBottom: value,
-      }
+      };
     },
     px: (value: PropertyValue<'margin'>) => {
       return {
         paddingLeft: value,
         paddingRight: value,
-      }
+      };
     },
     truncate: {
       overflow: 'hidden',
       textOverflow: 'ellipsis',
       whiteSpace: 'nowrap',
     } as any,
-    lineClamp: (lines: number | string) => ({
-      'overflow': 'hidden',
-      'display': '-webkit-box',
-      '-webkit-box-orient': 'vertical',
-      '-webkit-line-clamp': lines,
-    }) as any,
+    lineClamp: (lines: number | string) =>
+      ({
+        overflow: 'hidden',
+        display: '-webkit-box',
+        '-webkit-box-orient': 'vertical',
+        '-webkit-line-clamp': lines,
+      } as any),
     text: (size: keyof PinceauTheme['text']) => ({
       fontSize: `{text.${size}.fontSize}`,
       lineHeight: `{text.${size}.lineHeight}`,
     }),
     gradientText: (gradient: string) => ({
       '-webkit-text-fill-color': 'transparent',
-      'backgroundImage': gradient,
+      backgroundImage: gradient,
       '-webkit-background-clip': 'text',
-      'backgroundClip': 'text',
+      backgroundClip: 'text',
     }),
   },
-})
+});

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
-import type { DesignToken } from 'pinceau'
+import type { PropType } from 'vue';
+import type { DesignToken } from 'pinceau';
 
 defineProps({
   hoveredToken: {
@@ -15,7 +15,7 @@ defineProps({
     type: String as PropType<'variable' | 'token'>,
     required: false,
   },
-})
+});
 </script>
 
 <template>
@@ -25,7 +25,11 @@ defineProps({
       <span>@huyooo-hub/tokens</span>
     </h1>
     <div>
-      <TokenBadge :type="type" :clipboard-state="clipboardState" :token="hoveredToken" />
+      <TokenBadge
+        :type="type"
+        :clipboard-state="clipboardState"
+        :token="hoveredToken"
+      />
       <ThemeSelect />
       <NuxtLink to="https://github.com/nuxt-themes/tokens" target="_blank">
         <Icon name="fa-brands:github" />
@@ -48,7 +52,7 @@ css({
     justifyContent: 'space-between',
     alignItems: 'center',
     '@dark': {
-      backgroundColor: 'rgba({color.black}, 0.4)',
+      backgroundColor: 'rgba({huyooo.color.black}, 0.4)',
     },
     a: {
       lineHeight: '0'

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
-import type { DesignToken } from 'pinceau'
-import * as vt from 'style-value-types'
-import { useClipboard, useVModel } from '@vueuse/core'
+import type { PropType } from 'vue';
+import type { DesignToken } from 'pinceau';
+import * as vt from 'style-value-types';
+import { useClipboard, useVModel } from '@vueuse/core';
 
 const props = defineProps({
   hoveredToken: {
@@ -20,7 +20,7 @@ const props = defineProps({
   nestings: {
     type: Array,
     required: false,
-    default: () => ([]),
+    default: () => [],
   },
   name: {
     type: String,
@@ -30,73 +30,85 @@ const props = defineProps({
     type: Object as PropType<DesignToken> as any,
     required: true,
   },
-})
+});
 
-const emit = defineEmits(['update:hoveredToken', 'update:clipboardState'])
+const emit = defineEmits(['update:hoveredToken', 'update:clipboardState']);
 
-const hoveredToken = useVModel(props, 'hoveredToken', emit)
+const hoveredToken = useVModel(props, 'hoveredToken', emit);
 
-const clipboardState = useVModel(props, 'clipboardState', emit)
+const clipboardState = useVModel(props, 'clipboardState', emit);
 
-const tokenValue = computed(() => props?.token?.value || props.token?.original?.value)
+const tokenValue = computed(
+  () => props?.token?.value || props.token?.original?.value
+);
 
 const copyValue = computed(() => {
   if (props.token?.variable) {
-    return `{${props.token.variable.replace('var(--', '').replace(')', '').split('-').join('.')}}`
+    return `{${props.token.variable
+      .replace('var(--', '')
+      .replace(')', '')
+      .split('-')
+      .join('.')}}`;
   }
-  return props.token?.value || ''
-})
+  return props.token?.value || '';
+});
 
-const { copy: _copy } = useClipboard({ source: copyValue })
+const { copy: _copy } = useClipboard({ source: copyValue });
 
 const copy = () => {
-  _copy()
+  _copy();
   if (clipboardState.value !== 'copied') {
-    clipboardState.value = 'copied'
-    setTimeout(() => (clipboardState.value = ''), 1000)
+    clipboardState.value = 'copied';
+    setTimeout(() => (clipboardState.value = ''), 1000);
   }
-}
+};
 
 const leave = () => {
-  hoveredToken.value = undefined
-}
+  hoveredToken.value = undefined;
+};
 
 const enter = () => {
-  hoveredToken.value = props.token
-}
+  hoveredToken.value = props.token;
+};
 
-const isScreen = computed(() => props.nestings.includes('media'))
+const isScreen = computed(() => props.nestings.includes('media'));
 
-const isColor = computed(() => vt.color.test(tokenValue.value))
+const isColor = computed(() => vt.color.test(tokenValue.value));
 
-const isFont = computed(() => props.token.type === 'font')
+const isFont = computed(() => props.token.type === 'font');
 
-const isRadii = computed(() => props.nestings.includes('radii'))
+const isRadii = computed(() => props.nestings.includes('radii'));
 
-const isSize = computed(() => props.nestings.includes('size'))
+const isSize = computed(() => props.nestings.includes('size'));
 
-const isSpace = computed(() => props.nestings.includes('space'))
+const isSpace = computed(() => props.nestings.includes('space'));
 
-const isShadow = computed(() => props.nestings.includes('shadow'))
+const isShadow = computed(() => props.nestings.includes('shadow'));
 
-const isBorderWidth = computed(() => props.nestings.includes('borderWidth'))
+const isBorderWidth = computed(() => props.nestings.includes('borderWidth'));
 
-const isOpacity = computed(() => props.nestings.includes('opacity'))
+const isOpacity = computed(() => props.nestings.includes('opacity'));
 
-const isFontWeights = computed(() => props.nestings.includes('fontWeight'))
+const isFontWeights = computed(() => props.nestings.includes('fontWeight'));
 
-const isFontSizes = computed(() => props.nestings.includes('fontSize'))
+const isFontSizes = computed(() => props.nestings.includes('fontSize'));
 
-const isLetterSpacings = computed(() => props.nestings.includes('letterSpacing'))
+const isLetterSpacings = computed(() =>
+  props.nestings.includes('letterSpacing')
+);
 
-const isLeads = computed(() => props.nestings.includes('lead'))
+const isLeads = computed(() => props.nestings.includes('lead'));
 
-const isText = computed(() => props.nestings.includes('text'))
+const isText = computed(() => props.nestings.includes('text'));
 </script>
 
 <template>
   <div @mouseenter="enter" @mouseleave="leave" @click="() => copy()">
-    <NuxtLink v-if="name" :id="name" :to="`#${nestings.length ? [...nestings, name].join('-') : name}`">
+    <NuxtLink
+      v-if="name"
+      :id="name"
+      :to="`#${nestings.length ? [...nestings, name].join('-') : name}`"
+    >
       <h3>{{ name }}</h3>
     </NuxtLink>
     <span>
@@ -116,9 +128,7 @@ const isText = computed(() => props.nestings.includes('text'))
       </template>
       <template v-else-if="isShadow">
         <div class="box shadow">
-          <div class="shadowed" :style="{ boxShadow: tokenValue }">
-        &nbsp;
-          </div>
+          <div class="shadowed" :style="{ boxShadow: tokenValue }">&nbsp;</div>
         </div>
         <span>{{ tokenValue }}</span>
       </template>
@@ -127,24 +137,31 @@ const isText = computed(() => props.nestings.includes('text'))
         <span>{{ tokenValue }}</span>
       </template>
       <template v-else-if="isSize">
-        <div class="box size" :style="{ width: tokenValue, height: tokenValue }" />
+        <div
+          class="box size"
+          :style="{ width: tokenValue, height: tokenValue }"
+        />
         <span>{{ tokenValue }}</span>
       </template>
       <template v-else-if="isSpace">
-        <div class="box space" :style="{ width: '500px', height: '500px', padding: tokenValue }">
+        <div
+          class="box space"
+          :style="{ width: '500px', height: '500px', padding: tokenValue }"
+        >
           <div />
         </div>
         <span>{{ tokenValue }}</span>
       </template>
       <template v-else-if="isBorderWidth">
-        <div class="box borderWidths" :style="{ borderWidth: `${tokenValue}` }" />
+        <div
+          class="box borderWidths"
+          :style="{ borderWidth: `${tokenValue}` }"
+        />
         <span>{{ tokenValue }}</span>
       </template>
       <template v-else-if="isOpacity">
         <div class="box opacity">
-          <div :style="{ opacity: tokenValue }">
-        &nbsp;
-          </div>
+          <div :style="{ opacity: tokenValue }">&nbsp;</div>
         </div>
         <span>{{ tokenValue }}</span>
       </template>
@@ -161,7 +178,11 @@ const isText = computed(() => props.nestings.includes('text'))
         <span>{{ tokenValue }}</span>
       </template>
       <template v-else-if="isLeads">
-        <PlaceholderText single class="leads" :style="{ lineHeight: tokenValue }" />
+        <PlaceholderText
+          single
+          class="leads"
+          :style="{ lineHeight: tokenValue }"
+        />
         <span>{{ tokenValue }}</span>
       </template>
       <template v-else>
@@ -178,7 +199,7 @@ css({
     cursor: 'copy'
   },
   ':deep(.leads)': {
-    backgroundColor: '{color.green.500}',
+    backgroundColor: '{huyooo.color.green.500}',
     borderRadius: '{radii.sm}  '
   },
   'h3': {
@@ -194,12 +215,12 @@ css({
     height: '32px',
     width: '32px',
     borderRadius: '{radii.xl}',
-    backgroundColor: '{color.black}',
+    backgroundColor: '{huyooo.color.black}',
     '@dark': {
-      backgroundColor: '{color.white}'
+      backgroundColor: '{huyooo.color.white}'
     },
     '&.color': {
-      border: '2px solid {color.white}',
+      border: '2px solid {huyooo.color.white}',
       span: {
         position: 'absolute',
         bottom: '{space.2}',
@@ -208,13 +229,13 @@ css({
       }
     },
     '&.shadow': {
-      border: '2px solid {color.white}',
+      border: '2px solid {huyooo.color.white}',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
       width: '256px',
       height: '256px',
-      backgroundColor: '{color.white}',
+      backgroundColor: '{huyooo.color.white}',
       '@dark': {
         backgroundColor: 'white'
       },
@@ -228,39 +249,39 @@ css({
         width: '64px',
         height: '64px',
         borderRadius: '{radii.xl}',
-        backgroundColor: '{color.white}',
+        backgroundColor: '{huyooo.color.white}',
       },
     },
     '&.size': {
-      backgroundColor: '{color.black}',
+      backgroundColor: '{huyooo.color.black}',
       '@dark': {
-        backgroundColor: '{color.white}'
+        backgroundColor: '{huyooo.color.white}'
       },
      },
     '&.radii': {
-      border: '8px solid {color.indigoblue.500}',
+      border: '8px solid {huyooo.color.indigoblue.500}',
     },
     '&.space': {
       position: 'relative',
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      backgroundColor: '{color.black}',
+      backgroundColor: '{huyooo.color.black}',
       "@dark": {
-        backgroundColor: '{color.white}',
+        backgroundColor: '{huyooo.color.white}',
       },
       '& > div': {
-        backgroundColor: '{color.white}',
+        backgroundColor: '{huyooo.color.white}',
         borderRadius: '{radii.lg}',
         width: '100%',
         height: '100%',
         "@dark": {
-          backgroundColor: '{color.black}',
+          backgroundColor: '{huyooo.color.black}',
         }
       }
     },
     '&.borderWidths': {
-      borderColor: '{color.indigoblue.500}',
+      borderColor: '{huyooo.color.indigoblue.500}',
       borderStyle: 'solid'
     },
     '&.opacity': {
@@ -268,15 +289,15 @@ css({
       alignItems: 'center',
       justifyContent: 'center',
       "@dark": {
-        backgroundColor: '{color.white}',
+        backgroundColor: '{huyooo.color.white}',
       },
       '& > div': {
-        backgroundColor: '{color.white}',
+        backgroundColor: '{huyooo.color.white}',
         borderRadius: '{radii.lg}',
         width: '50%',
         height: '50%',
         "@dark": {
-          backgroundColor: '{color.black}',
+          backgroundColor: '{huyooo.color.black}',
         }
       }
     }
