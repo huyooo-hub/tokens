@@ -200,21 +200,21 @@ css({
   },
   ':deep(.leads)': {
     backgroundColor: '{huyooo.color.green.500}',
-    borderRadius: '{radii.sm}  '
+    borderRadius: '{huyooo.radii.sm}  '
   },
   'h3': {
     fontStyle: 'capitalize',
     textTransform: 'capitalize',
     fontFamily: '{font.sans}',
     fontWeight: 'bold',
-    marginTop: '{space.2}',
+    marginTop: '{huyooo.space.2}',
     fontSize: '{fontSize.3xl}'
   },
   '.box': {
     position: 'relative',
     height: '32px',
     width: '32px',
-    borderRadius: '{radii.xl}',
+    borderRadius: '{huyooo.radii.xl}',
     backgroundColor: '{huyooo.color.black}',
     '@dark': {
       backgroundColor: '{huyooo.color.white}'
@@ -223,8 +223,8 @@ css({
       border: '2px solid {huyooo.color.white}',
       span: {
         position: 'absolute',
-        bottom: '{space.2}',
-        right: '{space.4}',
+        bottom: '{huyooo.space.2}',
+        right: '{huyooo.space.4}',
         opacity: '50%'
       }
     },
@@ -241,14 +241,14 @@ css({
       },
       span: {
         position: 'absolute',
-        bottom: '{space.4}',
-        right: '{space.8}',
+        bottom: '{huyooo.space.4}',
+        right: '{huyooo.space.8}',
         opacity: '50%'
       },
       '& > .shadowed': {
         width: '64px',
         height: '64px',
-        borderRadius: '{radii.xl}',
+        borderRadius: '{huyooo.radii.xl}',
         backgroundColor: '{huyooo.color.white}',
       },
     },
@@ -272,7 +272,7 @@ css({
       },
       '& > div': {
         backgroundColor: '{huyooo.color.white}',
-        borderRadius: '{radii.lg}',
+        borderRadius: '{huyooo.radii.lg}',
         width: '100%',
         height: '100%',
         "@dark": {
@@ -293,7 +293,7 @@ css({
       },
       '& > div': {
         backgroundColor: '{huyooo.color.white}',
-        borderRadius: '{radii.lg}',
+        borderRadius: '{huyooo.radii.lg}',
         width: '50%',
         height: '50%',
         "@dark": {

@@ -42,12 +42,12 @@ defineProps({
 css({
   header: {
     overflow: 'hidden',
-    height: '{size.64}',
+    height: '{huyooo.size.64}',
     backdropFilter: 'saturate(180%) blur(20px)',
     width: '100%',
-    padding: '{space.4} {space.8}',
+    padding: '{huyooo.space.4} {huyooo.space.8}',
     position: 'sticky',
-    top: '{space.0}',
+    top: '{huyooo.space.0}',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -61,14 +61,14 @@ css({
     h1: {
       display: 'flex',
       alignItems: 'center',
-      gap: '{space.2}',
+      gap: '{huyooo.space.2}',
       fontSize: '{fontSize.sm}',
       fontWeight: '{fontWeight.black}',
       '@xl': {
         fontSize: '{fontSize.xl}',
       },
       '.icon': {
-        width: '{size.32}'
+        width: '{huyooo.size.32}'
       },
       span: {
         display: 'none'
@@ -84,16 +84,16 @@ css({
       justifyContent: 'space-between',
       alignItems: 'center',
       '& > * + *': {
-        marginLeft: '{space.4}'
+        marginLeft: '{huyooo.space.4}'
       },
       ':deep(.icon)': {
-        height: '{size.16}',
-        width: '{size.16}'
+        height: '{huyooo.size.16}',
+        width: '{huyooo.size.16}'
       },
       '@xl': {
         ':deep(.icon)': {
-          height: '{size.24}',
-          width: '{size.24}'
+          height: '{huyooo.size.24}',
+          width: '{huyooo.size.24}'
         }
       }
     }

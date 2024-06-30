@@ -4,37 +4,37 @@ const props = defineProps({
     type: String,
     required: false,
   },
-})
+});
 
-const copied = ref()
-const copy = ref()
+const copied = ref();
+const copy = ref();
 
 const { apply: applyCopy } = useMotion(copy, {
   initial: {
     scale: 1,
     rotate: 0,
   },
-})
+});
 const { apply: applyCopied } = useMotion(copied, {
   initial: {
     scale: 0,
     rotate: 180,
   },
-})
+});
 
 watch(
   () => props.clipboardState,
   (nextState) => {
     if (nextState === 'copied') {
-      applyCopy({ scale: 0, rotate: 180 })
-      applyCopied({ scale: 1, rotate: 0 })
-      return
+      applyCopy({ scale: 0, rotate: 180 });
+      applyCopied({ scale: 1, rotate: 0 });
+      return;
     }
 
-    applyCopied({ scale: 0, rotate: 180 })
-    applyCopy({ scale: 1, rotate: 0 })
-  },
-)
+    applyCopied({ scale: 0, rotate: 180 });
+    applyCopy({ scale: 1, rotate: 0 });
+  }
+);
 </script>
 
 <template>
@@ -55,14 +55,14 @@ css({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '{size.32}',
-    width: '{size.32}',
+    height: '{huyooo.size.32}',
+    width: '{huyooo.size.32}',
     position: 'relative',
     '& > span': {
       position: 'absolute',
       '&:deep(svg)': {
-        height: '{size.24}',
-        width: '{size.24}'
+        height: '{huyooo.size.24}',
+        width: '{huyooo.size.24}'
       },
     }
   }

@@ -86,8 +86,8 @@ css({
     overflow: 'hidden',
     border: '1px solid {huyooo.color.green.500}',
     backgroundColor: 'rgba({huyooo.color.green.200}, 0.4)',
-    padding: '{space.1} {space.2}',
-    borderRadius: '{radii.lg}',
+    padding: '{huyooo.space.1} {huyooo.space.2}',
+    borderRadius: '{huyooo.radii.lg}',
     fontWeight: '{fontWeight.bold}',
     color: '{huyooo.color.black}',
     '@dark': {

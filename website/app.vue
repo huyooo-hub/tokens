@@ -61,7 +61,7 @@ css({
 <style scoped lang="ts">
 css({
   section: {
-    padding: '{space.8}'
+    padding: '{huyooo.space.8}'
   },
   '.nuxt-themes-tokens': {
     width: '100%',

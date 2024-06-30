@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { PropType } from 'vue'
-import type { DesignToken } from 'pinceau'
-import { useVModel } from '@vueuse/core'
+import type { PropType } from 'vue';
+import type { DesignToken } from 'pinceau';
+import { useVModel } from '@vueuse/core';
 
 const props = defineProps({
   hoveredToken: {
@@ -27,34 +27,36 @@ const props = defineProps({
   nestings: {
     type: Array,
     required: false,
-    default: () => ([]),
+    default: () => [],
   },
   root: {
     type: Boolean,
     required: false,
   },
   ...variants,
-})
+});
 
-const emit = defineEmits(['update:hoveredToken', 'update:clipboardState'])
+const emit = defineEmits(['update:hoveredToken', 'update:clipboardState']);
 
-const route = useRoute()
+const route = useRoute();
 
-const collapsed = ref<boolean>(route.hash === `#${props.name}` ? false : props.root)
+const collapsed = ref<boolean>(
+  route.hash === `#${props.name}` ? false : props.root
+);
 
-const hoveredToken = useVModel(props, 'hoveredToken', emit)
+const hoveredToken = useVModel(props, 'hoveredToken', emit);
 
-const clipboardState = useVModel(props, 'clipboardState', emit)
+const clipboardState = useVModel(props, 'clipboardState', emit);
 
-const values = computed<any>(() => Object.entries(props.tokens))
+const values = computed<any>(() => Object.entries(props.tokens));
 
 const collapse = () => {
   if (!props.root) {
-    return
+    return;
   }
 
-  collapsed.value = !collapsed.value
-}
+  collapsed.value = !collapsed.value;
+};
 </script>
 
 <template>
@@ -71,8 +73,25 @@ const collapse = () => {
 
     <ul v-if="!collapsed">
       <li v-for="[key, value] of values" :key="key">
-        <DisplayValue v-if="value.value" v-model:hoveredToken="hoveredToken" v-model:clipboardState="clipboardState" :token="value" :type="type" :name="key" :nestings="[...nestings, name]" />
-        <TokensSection v-else v-model:hoveredToken="hoveredToken" v-model:clipboardState="clipboardState" :tokens="value" :type="type" flatten :name="key" :nestings="[...nestings, name]" />
+        <DisplayValue
+          v-if="value.value"
+          v-model:hoveredToken="hoveredToken"
+          v-model:clipboardState="clipboardState"
+          :token="value"
+          :type="type"
+          :name="key"
+          :nestings="[...nestings, name]"
+        />
+        <TokensSection
+          v-else
+          v-model:hoveredToken="hoveredToken"
+          v-model:clipboardState="clipboardState"
+          :tokens="value"
+          :type="type"
+          flatten
+          :name="key"
+          :nestings="[...nestings, name]"
+        />
       </li>
     </ul>
   </section>
@@ -115,9 +134,9 @@ css({
         ul: {
           display: 'grid',
           gridTemplateColumns: 'repeat(4, minmax(0, 1fr))',
-          gap: '{space.4}',
+          gap: '{huyooo.space.4}',
           "@lg": {
-            gap: '{space.16}',
+            gap: '{huyooo.space.16}',
           }
         }
       }

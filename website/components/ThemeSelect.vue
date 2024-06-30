@@ -1,12 +1,12 @@
 <script setup lang="ts">
-const colorMode = useColorMode()
+const colorMode = useColorMode();
 const onClick = () => {
-  const values = ['system', 'light', 'dark']
-  const index = values.indexOf(colorMode.preference)
-  const next = (index + 1) % values.length
+  const values = ['system', 'light', 'dark'];
+  const index = values.indexOf(colorMode.preference);
+  const next = (index + 1) % values.length;
 
-  colorMode.preference = values[next]
-}
+  colorMode.preference = values[next];
+};
 </script>
 
 <template>
@@ -29,13 +29,13 @@ css({
     justifyContent: 'center',
     alignItems: 'center',
     'svg, a > svg': {
-        height: '{size.16}',
-        width: '{size.16}'
+        height: '{huyooo.size.16}',
+        width: '{huyooo.size.16}'
       },
       '@xl': {
         'svg, a > svg': {
-          height: '{size.32}',
-          width: '{size.32}'
+          height: '{huyooo.size.32}',
+          width: '{huyooo.size.32}'
         }
       }
   }
