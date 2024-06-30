@@ -2,7 +2,7 @@
 import { theme } from '#pinceau/theme';
 
 const categories = computed(() => {
-  return Object.entries(theme).filter(
+  return Object.entries(theme.huyooo).filter(
     ([key]) => !['prose', 'typography', 'text'].includes(key)
   );
 });
