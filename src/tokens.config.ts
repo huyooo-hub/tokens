@@ -470,6 +470,98 @@ export default defineTheme({
       '8xl': '6rem',
       '9xl': '8rem',
     },
+    letterSpacing: {
+      $schema: {
+        title: 'Your website letter spacings.',
+        tags: [
+          '@studioInput design-token',
+          '@studioInputTokenType letter-spacing',
+          '@studioIcon fluent:font-space-tracking-out-24-filled',
+        ],
+      },
+      tighter: '-0.04em',
+      tight: '-0.02em',
+      normal: '0em',
+      wide: '0.02em',
+      wider: '0.04em',
+      widest: '0.08em',
+    },
+    lead: {
+      $schema: {
+        title: 'Your website line heights.',
+        tags: [
+          '@studioInput design-token',
+          '@studioInputTokenType size',
+          '@studioIcon icon-park-outline:auto-line-height',
+        ],
+      },
+      1: '.025rem',
+      2: '.5rem',
+      3: '.75rem',
+      4: '1rem',
+      5: '1.25rem',
+      6: '1.5rem',
+      7: '1.75rem',
+      8: '2rem',
+      9: '2.25rem',
+      10: '2.5rem',
+      none: '1',
+      tight: '1.25',
+      snug: '1.375',
+      normal: '1.5',
+      relaxed: '1.625',
+      loose: '2',
+    },
+    text: {
+      $schema: {
+        title: 'Your website text scales.',
+        tags: [
+          '@studioInput design-token',
+          '@studioInputTokenType size',
+          '@studioIcon material-symbols:format-size-rounded',
+        ],
+      },
+      xs: {
+        fontSize: '{fontSize.xs}',
+        lineHeight: '{lead.4}',
+      },
+      sm: {
+        fontSize: '{fontSize.sm}',
+        lineHeight: '{lead.5}',
+      },
+      base: {
+        fontSize: '{fontSize.base}',
+        lineHeight: '{lead.6}',
+      },
+      lg: {
+        fontSize: '{fontSize.lg}',
+        lineHeight: '{lead.7}',
+      },
+      xl: {
+        fontSize: '{fontSize.xl}',
+        lineHeight: '{lead.7}',
+      },
+      '2xl': {
+        fontSize: '{fontSize.2xl}',
+        lineHeight: '{lead.8}',
+      },
+      '3xl': {
+        fontSize: '{fontSize.3xl}',
+        lineHeight: '{lead.9}',
+      },
+      '4xl': {
+        fontSize: '{fontSize.4xl}',
+        lineHeight: '{lead.10}',
+      },
+      '5xl': {
+        fontSize: '{fontSize.5xl}',
+        lineHeight: '{lead.none}',
+      },
+      '6xl': {
+        fontSize: '{fontSize.6xl}',
+        lineHeight: '{lead.none}',
+      },
+    },
   },
   media: {
     $schema: {
@@ -1120,8 +1212,8 @@ export default defineTheme({
         '-webkit-line-clamp': lines,
       } as any),
     text: (size: keyof PinceauTheme['text']) => ({
-      fontSize: `{text.${size}.fontSize}`,
-      lineHeight: `{text.${size}.lineHeight}`,
+      fontSize: `{huyooo.text.${size}.fontSize}`,
+      lineHeight: `{huyooo.text.${size}.lineHeight}`,
     }),
     gradientText: (gradient: string) => ({
       '-webkit-text-fill-color': 'transparent',
