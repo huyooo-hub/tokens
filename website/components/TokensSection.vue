@@ -108,9 +108,9 @@ css({
   section: {
     '&.root': {
       '& > button': {
-        borderBottom: '{borderWidth.lg} solid {color.gray.100}',
+        borderBottom: '{huyooo.borderWidth.lg} solid {color.gray.100}',
         '@dark': {
-          borderBottom: '{borderWidth.lg} solid {color.gray.900}',
+          borderBottom: '{huyooo.borderWidth.lg} solid {color.gray.900}',
         },
         h2: {
           margin: 0

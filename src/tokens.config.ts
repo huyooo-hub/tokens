@@ -384,6 +384,20 @@ export default defineTheme({
         875: '0.875rem',
       },
     },
+    borderWidth: {
+      $schema: {
+        title: 'Your website border widths.',
+        tags: [
+          '@studioInput design-token',
+          '@studioInputTokenType size',
+          '@studioIcon material-symbols:border-all-outline-rounded',
+        ],
+      },
+      noBorder: '0',
+      sm: '1px',
+      md: '2px',
+      lg: '3px',
+    },
   },
   media: {
     $schema: {
