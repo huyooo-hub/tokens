@@ -428,6 +428,25 @@ export default defineTheme({
       serif: 'ui-serif, Georgia, Cambria, Times New Roman, Times, serif',
       mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace',
     },
+    fontWeight: {
+      $schema: {
+        title: 'Your website font weights.',
+        tags: [
+          '@studioInput design-token',
+          '@studioInputTokenType font-weight',
+          '@studioIcon radix-icons:font-style',
+        ],
+      },
+      thin: '100',
+      extralight: '200',
+      light: '300',
+      normal: '400',
+      medium: '500',
+      semibold: '600',
+      bold: '700',
+      extrabold: '800',
+      black: '900',
+    },
   },
   media: {
     $schema: {

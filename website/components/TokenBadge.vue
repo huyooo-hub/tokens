@@ -88,7 +88,7 @@ css({
     backgroundColor: 'rgba({huyooo.color.green.200}, 0.4)',
     padding: '{huyooo.space.1} {huyooo.space.2}',
     borderRadius: '{huyooo.radii.lg}',
-    fontWeight: '{fontWeight.bold}',
+    fontWeight: '{huyooo.fontWeight.bold}',
     color: '{huyooo.color.black}',
     '@dark': {
       color: '{huyooo.color.white}'

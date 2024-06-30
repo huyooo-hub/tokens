@@ -307,7 +307,7 @@ css({
   },
   'span': {
     '& > span': {
-      fontWeight: '{fontWeight.bold}'
+      fontWeight: '{huyooo.fontWeight.bold}'
     }
   },
 })

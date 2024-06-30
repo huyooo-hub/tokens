@@ -63,7 +63,7 @@ css({
       alignItems: 'center',
       gap: '{huyooo.space.2}',
       fontSize: '{fontSize.sm}',
-      fontWeight: '{fontWeight.black}',
+      fontWeight: '{huyooo.fontWeight.black}',
       '@xl': {
         fontSize: '{fontSize.xl}',
       },
