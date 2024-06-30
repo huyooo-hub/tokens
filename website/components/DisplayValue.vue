@@ -205,7 +205,7 @@ css({
   'h3': {
     fontStyle: 'capitalize',
     textTransform: 'capitalize',
-    fontFamily: '{font.sans}',
+    fontFamily: '{huyooo.font.sans}',
     fontWeight: 'bold',
     marginTop: '{huyooo.space.2}',
     fontSize: '{fontSize.3xl}'

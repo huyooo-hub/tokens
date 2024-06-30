@@ -398,6 +398,36 @@ export default defineTheme({
       md: '2px',
       lg: '3px',
     },
+    opacity: {
+      $schema: {
+        title: 'Your website opacities.',
+        tags: [
+          '@studioInput design-token',
+          '@studioInputTokenType opacity',
+          '@studioIcon material-symbols:opacity',
+        ],
+      },
+      noOpacity: '0',
+      bright: '0.1',
+      light: '0.15',
+      soft: '0.3',
+      medium: '0.5',
+      high: '0.8',
+      total: '1',
+    },
+    font: {
+      $schema: {
+        title: 'Your website fonts',
+        tags: [
+          '@studioInput design-token',
+          '@studioInputTokenType font',
+          '@studioIcon material-symbols:font-download-rounded',
+        ],
+      },
+      sans: 'ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji',
+      serif: 'ui-serif, Georgia, Cambria, Times New Roman, Times, serif',
+      mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace',
+    },
   },
   media: {
     $schema: {

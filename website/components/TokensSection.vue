@@ -102,7 +102,7 @@ css({
   'h2, h3': {
     fontStyle: 'capitalize',
     textTransform: 'capitalize',
-    fontFamily: '{font.sans}',
+    fontFamily: '{huyooo.font.sans}',
     fontWeight: 'bold',
   },
   section: {
